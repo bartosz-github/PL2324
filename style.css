@@ -1,0 +1,21 @@
+/* Web Fonts ----------------------- */
+
+
+/* Base Styles --------------------- */
+/*broad changes using CSS type selectors like making headings larger or styling the appearance of text hyperlinks*/
+
+* {
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 1.25em; /* 20px on most screens */
+  }
+  img {
+    width: 100%; /* responsive images */
+  }
+  
+  
+  /* Main Styles --------------------- */
+  /*more specific selectors*/
+  
+  /* Media Queries ------------------- */
