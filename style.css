@@ -1,21 +1,353 @@
-/* Web Fonts ----------------------- */
+/* Web Fonts -----------------------*/
 
 
-/* Base Styles --------------------- */
+/* Base Styles ---------------------*/
 /*broad changes using CSS type selectors like making headings larger or styling the appearance of text hyperlinks*/
 
 * {
     box-sizing: border-box;
   }
   html {
-    font-size: 1.25em; /* 20px on most screens */
+    font-size: 1.25em; /* 20px on most screens*/
   }
   img {
-    width: 100%; /* responsive images */
+    width: 100%; /* responsive images*/
   }
   
+
+
   
-  /* Main Styles --------------------- */
+  /* Main Styles ---------------------*/
   /*more specific selectors*/
-  
-  /* Media Queries ------------------- */
+/*####################################################################################################################*/
+/*############################################### MEDIA QUERIES ######################################################*/
+/*###################### XS devices < 575, default, no MQ #######################*/
+
+/*#########################################################################*/
+/*########### Small devices 576px - 767px width ##########################*/
+
+@media screen and (min-width: 576px) {
+  body {
+    background-color: blue;
+  }
+  .flex-container {
+      display: flex;
+      background-color: DodgerBlue;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+  /*##########################*/
+  /* show current MQ setting */
+  .MQ_viewport::after {
+    content: "Small devices 576px - 767px width";
+  }
+  /* show current MQ setting */
+  /*########################*/
+
+
+    /*#########################*/
+   /*  hide image in this MQ  */
+    .Persona {
+       display: none;
+    }
+    /* hide image in this MQ  */
+   /*########################*/
+
+}
+/*############################# Small devices ##############################*/
+/*#########################################################################*/
+/*################ Medium devices 768px - 991px width ####################*/
+
+@media screen and (min-width: 768px) {
+  body {
+    background-color: green;
+  }
+  .flex-container {
+      display: flex;
+      background-color: DodgerBlue;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+  }
+  .navbar {
+    display: none;
+  }
+  .hamburger {
+    display: none;
+  }
+
+    /* <!--###########################--> */
+    /* <!-- Sidenav --> */
+
+    .sidenav {
+      display:block;
+      float: left;
+      position: -webkit-sticky;
+      position: fixed;
+      text-align: center;
+      height: 100%;
+      width: 160px;
+      /* position: fixed; */
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #16072d; /* #111 */
+      overflow: auto;
+
+      padding-top: 20px;
+    }
+
+    .sidenav a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .main {
+      margin-left: 160px; /* Same as the width of the sidenav */
+      font-size: 28px; /* Increased text to enable scrolling */
+      padding: 0px 10px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+
+    /* <!-- Sidenav --> */
+    /* <!--###########################--> */
+
+  /*##########################*/
+  /* show current MQ setting */
+  .MQ_viewport::after {
+    content: "Medium devices 768px - 991px width";
+  }
+  /* show current MQ setting */
+  /*########################*/
+
+    
+    /*##########################*/
+    /* set up image in this MQ */
+    .Persona {
+      display: block;
+      background-image: url('../img/profile-artists-sketch 15 - smaller 2.png'); 
+      height: calc(100vh - 450px);
+      max-height: 25vh;
+      width: calc(100vh - 450px);
+      max-width: 25vh;
+      border-radius: 15px; /*  border-radius: 15px 15px 15px 15px; */
+      /* border-radius: 50%; */
+      background-color: black;
+      border: 1px solid white;
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-position: center;
+      justify-content: center;
+    } 
+    /* set up image in this MQ */
+    /*########################*/
+}
+/*############################# Medium devices #############################*/
+/*#########################################################################*/
+/*###################### Large 992px - 1199px width ######################*/
+@media screen and (min-width: 992px) {
+  body {
+    background-color: yellow;
+  }
+  .flex-container {
+      display: flex;
+      background-color: DodgerBlue;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+  }
+  .navbar {
+    display: none;
+  }
+  .hamburger {
+    display: none;
+  }
+  .sidenav{
+    display:block;
+  }
+    /* <!--###########################--> */
+    /* <!-- Sidenav --> */
+
+    .sidenav {
+      height: 100%;
+      width: 160px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #16072d; /* #111 */
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+
+    .sidenav a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .main {
+      margin-left: 160px; /* Same as the width of the sidenav */
+      font-size: 28px; /* Increased text to enable scrolling */
+      padding: 0px 10px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+
+    /* <!-- Sidenav --> */
+    /* <!--###########################--> */
+
+    /*##########################*/
+    /* show current MQ setting */
+    .MQ_viewport::after {
+      content: "Large 992px - 1199px width";
+    }
+    /* show current MQ setting */
+    /*########################*/
+
+    
+    /*##########################*/
+    /* set up image in this MQ */
+    .Persona {
+      display: block;
+      background-image: url('../img/profile-artists-sketch 15 - smaller 2.png'); 
+      height: calc(100vh - 450px);
+      max-height: 25vh;
+      width: calc(100vh - 450px);
+      max-width: 25vh;
+      border-radius: 15px; /*  border-radius: 15px 15px 15px 15px; */
+      /* border-radius: 50%; */
+      background-color: black;
+      border: 1px solid white;
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-position: center;
+      justify-content: center;
+    } 
+    /* set up image in this MQ */
+    /*########################*/
+}
+/*############################# Large devices ################################*/
+/*###########################################################################*/
+/*################# Extra Large 1200px width and above #####################*/
+@media screen and (min-width: 1200px) {
+  body {
+    background-color: red;
+  }
+  .flex-container {
+      display: flex;
+      background-color: DodgerBlue;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+  }
+  /* Most browsers will display the <article> element (user agent stylesheet) with the following default values: display:block; */ 
+  /* article {
+    display:block;
+  } */
+  .navbar {
+    display: none;
+  }
+  .hamburger {
+    display: none;
+  }
+  .sidenav{
+    display:block;
+  }
+      /* <!--###########################--> */
+    /* <!-- Sidenav --> */
+
+    .sidenav {
+      height: 100%;
+      width: 160px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #16072d; /* #111 */
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+
+    .sidenav a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .main {
+      margin-left: 160px; /* Same as the width of the sidenav */
+      font-size: 28px; /* Increased text to enable scrolling */
+      padding: 0px 10px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+
+    /* <!-- Sidenav --> */
+    /* <!--###########################--> */
+
+    /*##########################*/
+    /* show current MQ setting */
+    .MQ_viewport::after {
+      content: "Extra Large 1200px width and above";
+    }
+    /* show current MQ setting */
+    /*########################*/
+    
+    /*##########################*/
+    /* set up image in this MQ */
+    .Persona {
+      display: block;
+      background-image: url('../img/profile-artists-sketch 15 - smaller 2.png'); 
+      /* min-height: 20vh; */
+      height: calc(100vh - 450px);
+      max-height: 25vh;
+      /* min-width: 20vh; */
+      width: calc(100vh - 450px);
+      max-width: 25vh;
+      border-radius: 15px; /*  border-radius: 15px 15px 15px 15px; */
+      /* border-radius: 50%; */
+      background-color: black;
+      border: 1px solid white;
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-position: center;
+      justify-content: center;
+    } 
+    /* set up image in this MQ */
+    /*########################*/
+}
+/*################# Extra Large #####################*/
+/*############################################### MEDIA QUERIES ######################################################*/
+/*####################################################################################################################*/
+
